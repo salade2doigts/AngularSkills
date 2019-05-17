@@ -1,3 +1,12 @@
-<p>
-{{hero.name}}
-</p>
+<h2>
+{{hero.name | uppercase}} détails
+</h2>
+<div>id : {{hero.id}}</div>
+<div>name : {{hero.name}}</div>
+
+
+<div>
+  <label>name:
+    <input [(ngModel)] = "hero.name" placeholder="name"/> <!--envoi de donnée à dans les deux sens grace à ngModel -->
+  </label>
+</div>

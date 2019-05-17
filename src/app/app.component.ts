@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
 
-  title = 'Tour of heroes'; // export des variable dans le component app
+  title = 'Staff Manager'; // export des variable dans le component app
 }
