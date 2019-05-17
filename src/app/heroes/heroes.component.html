@@ -1,12 +1,18 @@
 <h2>My ressource</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes">
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)"><!-- initialisation de l'élement li au click-->
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
 
-<div>
-  <label>name:
-    <input [(ngModel)] = "hero.name" placeholder="name"/> <!--envoi de donnée à dans les deux sens grace à ngModel -->
-  </label>
+<div *ngIf="selectedHero"> <!-- n'affiche les information qu'au click car la class hero est attribué à la propriété selected hero.  -->
+
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+    </label>
+  </div>
+
 </div>
