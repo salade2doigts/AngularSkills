@@ -1,6 +1,6 @@
 <h2>My ressource</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" (click)="onSelect(hero)"><!-- initialisation de l'élement li au click-->
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero" ><!-- initialisation de l'élement li au click / choisi la class selected si li(hero) est selectionné(boucle puis compare la selection a l'objet hero -->
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
