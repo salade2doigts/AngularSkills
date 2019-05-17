@@ -1,9 +1,9 @@
-<h2>
-{{hero.name | uppercase}} détails
-</h2>
-<div>id : {{hero.id}}</div>
-<div>name : {{hero.name}}</div>
-
+<h2>My ressource</h2>
+<ul class="heroes">
+  <li *ngFor="let heroe of heroes">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
 
 <div>
   <label>name:
